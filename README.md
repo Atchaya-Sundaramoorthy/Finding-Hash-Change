@@ -1,4 +1,4 @@
-#Hash Change
+#HashChange
 A Plugin to alert when the hash value of a file changes.  It also provides the file size and extension of that file.
 	
 #Install site24x7 server agent
