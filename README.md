@@ -6,50 +6,32 @@ Download and install the latest version of the [Site24x7 Linux agent] / [Site24x
 
 ## How to Install Plugin
 
-### Linux
+Create a directory "hash_change" under Site24x7 Agent plugin directory :
 
-Create a directory "hash_change" under Site24x7 Linux Agent plugin directory :
+### For Linux
 	
 		Linux -> /opt/site24x7/monagent/plugins/hash_change
 		
-#### Download the files 
+### For Windows
+
+		Windows -> C:\Program Files (x86)\Site24x7\WinAgent\monitoring\Plugins\hash_change
+		
+### Download the files 
 
 Open terminal inside the hash_change folder created on the above step and execute the below mentioned commands to download the plugin files.
 
 		wget https://raw.githubusercontent.com/site24x7/plugins/master/hash_change/hash_change.py
 		wget https://raw.githubusercontent.com/site24x7/plugins/master/hash_change/hash_change.cfg
 		
-#### Configuration 
+### Configuration 
 
 In the hash_change.cfg file, configure the filepath and hashtype to be monitored as mentioned below.
 
 		[display_name]
 		filepath="<file_name_that_needs_to_be_monitored_along_with_file_path>"
 		hashtype="<hash_type_for_hashing>"	
-		hash_storage_path="<storage_path_for_storing_current_hash"		
+		hash_storage_path="<storage_path_for_storing_current_hash"
 		
-### Windows
-
-Create a folder "hash_change" under Site24x7 Windows Agent plugin directory :
-
-		Windows -> C:\Program Files (x86)\Site24x7\WinAgent\monitoring\Plugins\hash_change
-		
-#### Download the files
-		
-Download the files from the following link and place it in the hash_change folder created on the above step.
-
-		https://raw.githubusercontent.com/site24x7/plugins/master/hash_change/hash_change.py
-		https://raw.githubusercontent.com/site24x7/plugins/master/hash_change/hash_change.json
-
-#### Configuration
-
-In the hash_change.json file, configure the filepath and hashtype to be monitored as mentioned below.
-
-		{"display_name":
-				{"filepath":"<file_name_that_needs_to_be_monitored_along_with_file_path>",
-				"hashtype":"<hash_type_for_hashing>",
-				"hash_storage_path":"<storage_file_name_for_storing_current_hash>"}}
-
 ## Metrics Captured
 
 		hashing               ->  Provides the hash type of the given file.
